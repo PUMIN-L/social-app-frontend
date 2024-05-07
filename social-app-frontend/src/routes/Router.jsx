@@ -1,10 +1,14 @@
 import { createBrowserRouter ,RouterProvider} from 'react-router-dom'
+import HomePage from '../pages/HomePage';
+import LoginPage from '../pages/LoginPage';
+import Profile from '../pages/Profile';
+import NotFoundPage from '../pages/NotFoundPage';
 
 const router = createBrowserRouter([
-    {path:"/", element : <h1>Home</h1>},
-    {path:"/login", element : <h1>Login</h1>},
-    {path:"/profile", element : <h1>Profile</h1>},
-    {path:"*", element : <h1>404 Not Found</h1>}
+    {path:"/", element : <HomePage/>},
+    {path:"/login", element : <LoginPage/>},
+    {path:"/profile", element : <Profile/>},
+    {path:"*", element : <NotFoundPage/>}
 ])
 
 function Router() {
